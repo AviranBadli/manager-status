@@ -1,0 +1,13 @@
+# Personal config (contains PII — never commit)
+guidelines/jira-config.md
+
+# Report artifacts (local only)
+artifacts/reports/*.md
+
+# macOS
+.DS_Store
+
+# Editor
+.vscode/
+*.swp
+*.swo
