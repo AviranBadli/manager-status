@@ -7,11 +7,11 @@ Works with both **Cursor** (`.cursor/`) and **Claude Code** (`.claude/`).
 ## Quick Start
 
 ```
-# Generate status report for Sprint 17
-/status-for-manager 17
+# Generate status report for a sprint
+/status-for-manager [sprint-number]
 
 # Verify data before generating
-/status.verify 17
+/status.verify [sprint-number]
 
 # Publish approved report to Google Doc
 /status.publish

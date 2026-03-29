@@ -45,9 +45,9 @@ sprints:
   - number: 16
     id: YOUR_SPRINT_16_ID
     name: Sprint 16
-  - number: 17
-    id: YOUR_SPRINT_17_ID
-    name: Sprint 17
+  - number: N
+    id: YOUR_SPRINT_N_ID
+    name: Sprint N
   - number: 18
     id: YOUR_SPRINT_18_ID
     name: Sprint 18

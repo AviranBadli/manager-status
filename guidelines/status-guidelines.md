@@ -22,7 +22,7 @@ An Initiative is "active" ONLY if it has at least 1 Story or Subtask with work i
 
 ### 2. Sprint ID ≠ Sprint Number
 
-- Sprint Number = "Sprint 17" (human label)
+- Sprint Number = "Sprint N" (human label, e.g., "Sprint 15")
 - Sprint ID = the integer in the JIRA API (e.g., `23`)
 - Use `customfield_10020` for sprint verification, not just the sprint name
 - Always look up Sprint ID from config — never guess
