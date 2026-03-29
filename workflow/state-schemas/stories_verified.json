@@ -1,0 +1,35 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Verified Sprint Stories",
+  "description": "Zone 3 output — stories confirmed in sprint via customfield_10020",
+  "type": "object",
+  "required": ["sprint_id", "verified_count", "excluded_count", "stories_verified"],
+  "properties": {
+    "sprint_id": { "type": "integer" },
+    "verified_count": { "type": "integer" },
+    "excluded_count": { "type": "integer" },
+    "stories_verified": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["key", "summary", "status", "parent"],
+        "properties": {
+          "key": { "type": "string" },
+          "summary": { "type": "string" },
+          "status": { "type": "string" },
+          "issuetype": { "type": "string" },
+          "parent": { "type": "object", "properties": { "key": { "type": "string" }, "summary": { "type": "string" } } },
+          "assignee": { "type": "object" }
+        }
+      }
+    },
+    "stories_excluded": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": { "key": { "type": "string" }, "reason": { "type": "string" } }
+      }
+    },
+    "verified_at": { "type": "string", "format": "date-time" }
+  }
+}

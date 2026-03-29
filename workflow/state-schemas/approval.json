@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Human Approval State",
+  "description": "Zone 6 output — user decision on Initiative list",
+  "type": "object",
+  "required": ["sprint_id", "decision"],
+  "properties": {
+    "sprint_id": { "type": "integer" },
+    "decision": { "type": "string", "enum": ["approved", "rejected", "re-verify"] },
+    "approved_at": { "type": "string", "format": "date-time" },
+    "initiatives_approved": { "type": "array", "items": { "type": "string" } },
+    "phase2_ready": { "type": "boolean" },
+    "user_notes": { "type": "string" }
+  }
+}

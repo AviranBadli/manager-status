@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Sprint State",
+  "description": "Zone 1 output — resolved sprint details",
+  "type": "object",
+  "required": ["sprint_name", "sprint_number", "sprint_id", "project_key", "cloud_id", "start_date", "end_date", "status"],
+  "properties": {
+    "sprint_name": { "type": "string", "example": "Sprint 15" },
+    "sprint_number": { "type": "integer", "example": 15 },
+    "sprint_id": { "type": "integer", "description": "JIRA Sprint ID (not sprint number)", "example": 21 },
+    "project_key": { "type": "string", "example": "JN" },
+    "cloud_id": { "type": "string" },
+    "start_date": { "type": "string", "format": "date" },
+    "end_date": { "type": "string", "format": "date" },
+    "status": { "type": "string", "enum": ["active", "closed", "future"] },
+    "jira_name": { "type": "string" },
+    "created_at": { "type": "string", "format": "date-time" }
+  }
+}

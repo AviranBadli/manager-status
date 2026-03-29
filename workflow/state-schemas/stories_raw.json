@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Raw Sprint Stories",
+  "description": "Zone 2 output — all Stories/Subtasks from JQL, unverified",
+  "type": "object",
+  "required": ["sprint_id", "total_count", "stories", "pagination_info"],
+  "properties": {
+    "sprint_id": { "type": "integer" },
+    "total_count": { "type": "integer" },
+    "stories": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["key", "summary", "status", "issuetype"],
+        "properties": {
+          "key": { "type": "string" },
+          "summary": { "type": "string" },
+          "status": { "type": "string" },
+          "issuetype": { "type": "string", "enum": ["Story", "Sub-task"] },
+          "parent": { "type": "object", "properties": { "key": { "type": "string" }, "summary": { "type": "string" } } },
+          "assignee": { "type": "object", "properties": { "displayName": { "type": "string" } } },
+          "customfield_10020_raw": { "type": "array", "description": "Raw sprint field — verified in Zone 3" }
+        }
+      }
+    },
+    "pagination_info": {
+      "type": "object",
+      "required": ["total_pages", "final_is_last"],
+      "properties": {
+        "total_pages": { "type": "integer" },
+        "final_is_last": { "type": "boolean", "description": "Must be true — all pages fetched" }
+      }
+    },
+    "fetched_at": { "type": "string", "format": "date-time" }
+  }
+}

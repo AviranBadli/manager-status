@@ -1,0 +1,27 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Verified Initiatives",
+  "description": "Zone 4 output — active Initiatives with verified sprint work",
+  "type": "object",
+  "required": ["sprint_id", "initiatives"],
+  "properties": {
+    "sprint_id": { "type": "integer" },
+    "initiatives": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["key", "summary", "epic_count", "story_count"],
+        "properties": {
+          "key": { "type": "string" },
+          "summary": { "type": "string" },
+          "status": { "type": "string" },
+          "epic_count": { "type": "integer" },
+          "story_count": { "type": "integer" },
+          "epics": { "type": "array", "items": { "type": "string" } }
+        }
+      }
+    },
+    "standalone_epics": { "type": "array" },
+    "resolved_at": { "type": "string", "format": "date-time" }
+  }
+}

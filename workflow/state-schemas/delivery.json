@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Delivery State",
+  "description": "Zone 12 output — published Google Doc details",
+  "type": "object",
+  "required": ["sprint_id", "google_doc_url"],
+  "properties": {
+    "sprint_id": { "type": "integer" },
+    "google_doc_url": { "type": "string", "format": "uri" },
+    "google_doc_title": { "type": "string" },
+    "artifact_path": { "type": "string" },
+    "delivered_at": { "type": "string", "format": "date-time" }
+  }
+}
